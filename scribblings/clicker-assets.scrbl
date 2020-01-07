@@ -2,11 +2,12 @@
 @require[@for-label[clicker-assets
                     racket/base]]
 
+@(require define-assets-from)
+
 @title{clicker-assets}
 @author{thoughtstem}
 
-@(require scribble/extract)
-
 @defmodule[clicker-assets]
 
-@(include-extracted "../main.rkt")
+@(require (submod "../main.rkt" asset-docs))
+@(doc-all (submod "../main.rkt" asset-docs))
